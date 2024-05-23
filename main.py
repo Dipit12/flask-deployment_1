@@ -1,9 +1,6 @@
 from flask import Flask, render_template, request, flash, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
-from urllib.parse import quote_plus
-
-# Replace any usage of url_quote or url_encode with quote_plus()
-encoded_url = quote_plus(some_string)
+from urllib.parse import quote_plus  # Import quote_plus
 import random
 
 app = Flask(__name__, template_folder='templates')
@@ -108,4 +105,3 @@ def logout():
 
 if __name__ == "__main__":
     app.run(debug=True)
-    
