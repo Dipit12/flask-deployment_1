@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, flash, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
+from werkzeug.utils import import_string
+url_quote = import_string('werkzeug.urls:url_quote')
 import random
 
 app = Flask(__name__, template_folder='templates')
