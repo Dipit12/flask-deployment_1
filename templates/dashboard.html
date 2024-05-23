@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Your Dashboard</h1>
+            <a href="{{ url_for('logout') }}" class="logout-button">Logout</a>
+        </header>
+        <div class="info-panel">
+            <div class="balance-panel">
+                <h2>Your Current Balance:</h2>
+                <p>${{ current_balance }}</p>
+            </div>
+            <div class="pin-panel">
+                <h2>Your PIN:</h2>
+                <p>{{ pin }}</p>
+            </div>
+        </div>
+        <div class="action-panel">
+            <form action="/deposit" method="post">
+                <div class="input-group">
+                    <label for="deposit_amount">Amount to Deposit:</label>
+                    <input type="number" id="deposit_amount" name="deposit_amount" required>
+                </div>
+                <button type="submit" class="action-button">Deposit</button>
+            </form>
+
+            <form action="/withdraw" method="post">
+                <div class="input-group">
+                    <label for="withdraw_amount">Amount to Withdraw:</label>
+                    <input type="number" id="withdraw_amount" name="withdraw_amount" required>
+                </div>
+                <button type="submit" class="action-button">Withdraw</button>
+            </form>
+
+            <form action="/change_pin" method="post">
+                <div class="input-group">
+                    <label for="new_pin">New PIN:</label>
+                    <input type="number" id="new_pin" name="new_pin" required>
+                </div>
+                <button type="submit" class="action-button">Change PIN</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

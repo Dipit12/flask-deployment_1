@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.logout-button {
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.info-panel {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.balance-panel, .pin-panel {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.balance-panel {
+    background-color: #e3f2fd;
+}
+
+.pin-panel {
+    background-color: #f0f4c3;
+}
+
+.action-panel {
+    margin-top: 20px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.action-button {
+    padding: 8px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #45a049;
+}

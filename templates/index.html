@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Site</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Our Banking Site</h1>
+        </header>
+        <main>
+            <img src="{{ url_for('static', filename='bank_image.jpeg') }}" height="350" width="350">
+            <div class="buttons">
+                <button onclick="location.href='/login'">Login</button>
+                <button onclick="location.href='/register'">Register</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
